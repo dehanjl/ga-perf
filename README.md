@@ -10,6 +10,11 @@ The world consists of some number of points, and an agent must find the shortest
 # The Agents
 Each agent contains an array of the order in which the points in the world are visited. For now, an agent is allowed to visit a point multiple times, and is punished for every point not visited. Furthermore, an agent does not need to return it's starting position. This heuristic algorithm is subject to change.
 
+# The Heuristic Algorithm
+The basic algorithm which is used to compute an Agent's score.
+
+`TODO`
+
 # The Implementations
 ## In Progess
 - Golang
