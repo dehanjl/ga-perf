@@ -65,9 +65,8 @@ func (a *Agent) evaluate(points []Point) float64 {
 	// add the distance back to the start
 	score += distance(points[a.genes[i-1]], points[a.genes[0]])
 
-	// for each point that has not been visited, add the distance to the closest point
-	// this seems slow
-	// TODO: consider just adding an arbitrary penalty
+	// for each point that has not been visited, add the distance to the closest point and back
+	// TODO: This seems slow, consider just adding an arbitrary penalty
 	for i := range visitedCount {
 		if visitedCount[i] == 0 {
 			var minDist float64 = math.Inf(1)
@@ -79,7 +78,7 @@ func (a *Agent) evaluate(points []Point) float64 {
 					}
 				}
 			}
-			score += minDist
+			score += 2 * minDist
 		}
 	}
 
