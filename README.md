@@ -48,4 +48,10 @@ For each language, it is intended to complete a first implementation without any
 - Kotlin
 
 # Visualization
-What is the point of creating an AI if you cant 
+What is the point of creating an AI if you cant create a cool GIF for twitter? Currently I am looking at the following ways of animating the learning process:
+1. [SFML](https://www.sfml-dev.org/) with C++
+    - Probably a pain in the arse, but fun.
+2. [Manim](https://github.com/ManimCommunity/manim/) with Python
+    - I can pretend I'm Grant Sanderson.
+3. *Something* with Typescript
+    - I guess I need to practice this as well.
