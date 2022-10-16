@@ -7,11 +7,10 @@ import (
 )
 
 type Point struct {
-	idx  int
+	idx  int // not quite sure why this is here...
 	X, Y float64
 }
 
-// distance bewteen two points
 func distance(p, q Point) float64 {
 	return math.Hypot(float64(p.X-q.X), float64(p.Y-q.Y))
 }

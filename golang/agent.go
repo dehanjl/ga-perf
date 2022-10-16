@@ -11,6 +11,13 @@ type Agent struct {
 	score float64
 }
 
+// ByScore implements sort.Interface for []Agent based on the Agent.score field
+type ByScore []Agent
+
+func (a ByScore) Len() int           { return len(a) }
+func (a ByScore) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a ByScore) Less(i, j int) bool { return a[i].score < a[j].score }
+
 // a new agent with random genes
 func newRandomAgent(geneSize int) Agent {
 
@@ -26,18 +33,44 @@ func newAgent(geneSize int) Agent {
 	return Agent{make([]int, geneSize), math.Inf(-1)}
 }
 
+func newAgentFromParents(parents []Agent) Agent {
+
+	var newAgent = newAgent(len(parents[0].genes))
+	// for each gene, choose a random parent
+	for i := range newAgent.genes {
+		newAgent.genes[i] = parents[rand.Intn(len(parents))].genes[i]
+	}
+
+	return newAgent
+}
+
+func (a *Agent) mutate() {
+	// this will always mutate a gene
+	// TODO: consider making this more interesting
+
+	// choose a random gene
+	var gene = rand.Intn(len(a.genes))
+
+	// choose a random point
+	var point = rand.Intn(numPoints)
+
+	// set the gene to the point
+	a.genes[gene] = point
+}
+
 // a function to evaluate the fitness of an agent
 func (a *Agent) evaluate(points []Point) float64 {
 
 	var score float64
 
-	// a mask to determine if all points have been visited
+	// mask to determine if all points have been visited
 	var mask uint = determineMask(uint(numPoints)) // TODO: perhaps make this a parameter
 
-	// a uint to store if points are visited
+	// keep track if all points have been visited
+	// a uint is used basically used as a bit array
+	// TODO: consider just using visitedCount
 	var pointsCheck uint = 0
 
-	// an array to store the number of times each point is visited
 	var visitedCount = make([]int, numPoints)
 
 	// set visitedCount and pointsCheck for the first gene

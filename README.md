@@ -55,3 +55,15 @@ What is the point of creating an AI if you cant create a cool GIF for twitter? C
     - I can pretend I'm Grant Sanderson.
 3. *Something* with Typescript
     - I guess I need to practice this as well.
+
+# Performance Comparison
+In order to compare the different implementations, it is intended to measure all implementations relative to some baseline implementation.
+## Benchmarking Settings
+### Standard Settings
+*This is subject to change*
+- Number of points in the world = 32
+- Number of agents per generation = 1000
+- Number of generations = 50
+- Number of survivors per generation = 100
+- Number of runs = 16
+## Results
