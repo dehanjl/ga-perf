@@ -12,7 +12,7 @@ type Point struct {
 }
 
 func distance(p, q Point) float64 {
-	return math.Hypot(float64(p.X-q.X), float64(p.Y-q.Y))
+	return math.Hypot(p.X-q.X, p.Y-q.Y)
 }
 
 func newRandomPoint(index int, lim float64) Point {
