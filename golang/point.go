@@ -15,7 +15,7 @@ func distance(p, q Point) float64 {
 	return math.Hypot(float64(p.X-q.X), float64(p.Y-q.Y))
 }
 
-func newPoint(index int, lim float64) Point {
+func newRandomPoint(index int, lim float64) Point {
 	return Point{
 		idx: index,
 		X:   rand.Float64() * lim,

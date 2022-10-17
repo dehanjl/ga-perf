@@ -19,7 +19,7 @@ func main() {
 	// determine the points of interest in our little world
 	var points = make([]Point, numPoints)
 	for i := range points {
-		points[i] = newPoint(i, maxSize)
+		points[i] = newRandomPoint(i, maxSize)
 	}
 
 	startTime := time.Now()
