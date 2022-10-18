@@ -8,12 +8,12 @@ The idea is to implement various versions of a [Genetic Algorithm](https://en.wi
 The world consists of some number of fixed points, and an agent must find the shortest path for visiting all points in this world.
 
 # The Agents
-## Type A Agents
+## Type 1 Agents
 These are the simple agents, where each agent contains an array of the order in which the points in the world are visited. For now, an agent is allowed to visit a point in the world multiple times.
 
 The motivation for this type of agent is that it is the obvious solution to the problem.
 
-## Type B Agents
+## Type 2 Agents
 These agents are sligthtly more complex. These agents contain a list of floating points which are possibly independent of the fixed points in the world. As the agents train, the floating points may move around, and the number may shift. If adding a fixed point in the world to the list would make the path more efficient, it is added.
 
 The motivation for this type of agent is that it requires a more complex data structure and I hope that it will create a more satisfying visualization.
@@ -21,7 +21,7 @@ The motivation for this type of agent is that it requires a more complex data st
 # The Heuristic Algorithm
 The algorithms which is used to compute an Agent's score. 
 
-## Type A Agents
+## Type 1 Agents
 
 0. Given: 
     - Track which if a point has been visited at all
@@ -34,14 +34,16 @@ The algorithms which is used to compute an Agent's score.
     - Add the distance of going to that point and back
 
 
-## Type B Agents
+## Type 2 Agents
 
 `TODO`
 
 # The Implementations
 For each language, it is intended to complete a first implementation without any fancy libraries or multi-processing. More advanced implementations making use of these techniques are also intended, in order to see how much performance can be gained.
+## Basic Level of Completion
+- Golang (Type 1)
 ## In Progess
-- Golang (Type A)
+- Python (Type 1)
 ## Planned
 - Python
 - Rust
@@ -67,3 +69,5 @@ In order to compare the different implementations, it is intended to measure all
 - Number of survivors per generation = 100
 - Number of runs = 16
 ## Results
+*Preliminary results from running the programs on a Ryzen 7 3700X*
+- Golang: ~160ms/run; 3.1ms/gen
