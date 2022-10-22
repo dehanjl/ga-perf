@@ -30,12 +30,12 @@ func newRandomAgent(geneSize int) Agent {
 	// shuffle
 	rand.Shuffle(len(genes), func(i, j int) { genes[i], genes[j] = genes[j], genes[i] })
 
-	return Agent{genes, math.Inf(-1)}
+	return Agent{genes, math.Inf(1)}
 }
 
 // a new empty agent
 func newAgent(geneSize int) Agent {
-	return Agent{make([]int, geneSize), math.Inf(-1)}
+	return Agent{make([]int, geneSize), math.Inf(1)}
 }
 
 // new agent which is a clone of a random parent

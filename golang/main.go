@@ -49,7 +49,7 @@ func main() {
 		}
 	}
 
-	// avaluate the final population
+	// evaluate the final population
 	evaluatePopulation(population, points)
 	elapsed := time.Since(startTime)
 
