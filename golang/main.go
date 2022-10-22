@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"sort"
 	"time"
 )
@@ -15,6 +16,8 @@ const numGenerations int = 50
 const numSurvivors int = 100
 
 func main() {
+
+	rand.Seed(time.Now().UnixNano())
 
 	// determine the points of interest in our little world
 	var points = make([]Point, numPoints)
