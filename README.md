@@ -9,7 +9,7 @@ The world consists of some number of fixed points, and an agent must find the sh
 
 # The Agents
 ## Type 1 Agents
-These are the simple agents, where each agent contains an array of the order in which the points in the world are visited. For now, an agent is allowed to visit a point in the world multiple times.
+These are the simple agents, where each agent contains an array of the order in which the points in the world are visited. The initial generation of the agents is initialised with a shuffled array of all the points in the world. Thus an agent will always visit all the points in the world. An agent is mutated by swapping two genes.
 
 The motivation for this type of agent is that it is the obvious solution to the problem.
 
@@ -63,11 +63,11 @@ In order to compare the different implementations, it is intended to measure all
 ## Benchmarking Settings
 ### Standard Settings
 *This is subject to change*
-- Number of points in the world = 32
+- Number of points in the world = 256
 - Number of agents per generation = 1000
 - Number of generations = 50
 - Number of survivors per generation = 100
 - Number of runs = 16
 ## Results
 *Preliminary results from running the programs on a Ryzen 7 3700X*
-- Golang: ~160ms/run; 3.1ms/gen
+- Golang: ~106ms/run; 2.1ms/gen
