@@ -71,3 +71,4 @@ In order to compare the different implementations, it is intended to measure all
 ## Results
 *Preliminary results from running the programs on a Ryzen 7 3700X*
 - Golang: ~106ms/run; 2.1ms/gen
+- Python: ~4450ms/run; 89ms/gen
