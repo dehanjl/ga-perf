@@ -18,10 +18,11 @@ class Agent:
         self.score = inf
 
     def evaluate(self, points: List[Point]) -> float:
-        self.score = sum(distance(points[i], points[j])
-                         for i, j in zip(self.genes, self.genes[1:]))
-        # add distance back to start
-        self.score += distance(points[self.genes[0]], points[self.genes[-1]])
+        # traverse the path, including back to the start
+        self.score = sum(
+            distance(points[i], points[j])
+            for i, j in zip(self.genes, self.genes[1:] + self.genes[:1])
+        )
         return self.score
 
     def shuffle(self):

@@ -35,8 +35,6 @@ func main() {
 
 	// TODO: keep track of best score for each generation
 	for i := 0; i < numGenerations; i++ {
-
-		// evaluate the population
 		evaluatePopulation(population, points)
 
 		// get the slice of the surviving agents
