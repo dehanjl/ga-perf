@@ -40,13 +40,13 @@ fn distance(a: &Point, b: &Point) -> f64 {
 }
 
 fn eval(agent: &Vec<i32>, world: &Vec<Point>) -> f64 {
-    let mut score = 0.0;
-    for i in 0..NUM_POINTS {
-        let j = (i + 1) % NUM_POINTS;
-        score += distance(
-            &world[agent[i as usize] as usize],
-            &world[agent[j as usize] as usize],
-        );
-    }
-    score
+    (0..NUM_POINTS)
+        .zip((1..NUM_POINTS).chain(0..1))
+        .map(|(i, j)| {
+            distance(
+                &world[agent[i as usize] as usize],
+                &world[agent[j as usize] as usize],
+            )
+        })
+        .sum()
 }
