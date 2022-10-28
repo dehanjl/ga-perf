@@ -10,3 +10,7 @@ __pycache__/
 
 # Experiment files
 *.ipynb
+
+## Rust
+*.lock
+rust/target/

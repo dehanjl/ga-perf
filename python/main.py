@@ -5,7 +5,7 @@ from point import random_point
 
 # tuneable parameters
 # TODO: extract these to somewhere nicer
-NUM_POINTS = 256  # setting this over 63 might cause problems
+NUM_POINTS = 256
 MAX_SIZE = 10  # basically the dimensions of the world
 MAX_POPULATION = 1000
 NUM_GENERATIONS = 50

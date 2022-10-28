@@ -42,11 +42,10 @@ The algorithms which is used to compute an Agent's score.
 For each language, it is intended to complete a first implementation without any fancy libraries or multi-processing. More advanced implementations making use of these techniques are also intended, in order to see how much performance can be gained.
 ## Basic Level of Completion
 - Golang (Type 1)
-## In Progess
 - Python (Type 1)
+## In Progess
+- Rust (Type 1)
 ## Planned
-- Python
-- Rust
 - Kotlin
 
 # Visualization
