@@ -69,5 +69,6 @@ In order to compare the different implementations, it is intended to measure all
 - Number of runs = 16
 ## Results
 *Preliminary results from running the programs on a Ryzen 7 3700X*
-- Golang: ~106ms/run; 2.1ms/gen
-- Python: ~4480ms/run; 89.5ms/gen
+- Golang:   ~106ms/run;     2.1ms/gen
+- Rust:     ~556ms/run      11.ms/gen
+- Python:   ~4480ms/run;    89.5ms/gen
