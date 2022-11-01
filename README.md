@@ -68,7 +68,7 @@ In order to compare the different implementations, it is intended to measure all
 - Number of survivors per generation = 100
 - Number of runs = 16
 ## Results
-*Preliminary results from running the programs on a Ryzen 7 3700X*
-- Golang:   ~106ms/run;     2.1ms/gen
-- Rust:     ~556ms/run      11.ms/gen
-- Python:   ~4480ms/run;    89.5ms/gen
+# Results from using [Hyperfine](https://github.com/sharkdp/hyperfine)
+- Rust: 1x
+- Golang: 2.67x
+- Python: 49.71x

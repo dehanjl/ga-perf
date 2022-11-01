@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"sort"
 	"time"
@@ -25,8 +24,6 @@ func main() {
 		points[i] = newRandomPoint(i, maxSize)
 	}
 
-	startTime := time.Now()
-
 	// setup the first generation
 	var population = make([]Agent, maxPopulation)
 	for i := range population {
@@ -49,12 +46,6 @@ func main() {
 
 	// evaluate the final population
 	evaluatePopulation(population, points)
-	elapsed := time.Since(startTime)
-
-	fmt.Println("Best score:", population[0].score)
-
-	fmt.Println("Execution time:", elapsed)
-	fmt.Println("Time per generation:", elapsed/time.Duration(numGenerations+1))
 }
 
 // helper function to evaluate and sort a population

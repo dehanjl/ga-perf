@@ -1,4 +1,3 @@
-import time
 from typing import List
 from agent import Agent
 from point import random_point
@@ -26,8 +25,6 @@ if __name__ == '__main__':
     # define the points
     points = [random_point(MAX_SIZE) for _ in range(NUM_POINTS)]
 
-    start_time = time.perf_counter_ns()
-
     # setup the first generation
     population = [Agent(NUM_POINTS) for _ in range(MAX_POPULATION)]
 
@@ -44,11 +41,3 @@ if __name__ == '__main__':
 
     # evalutate the final population
     population = evaluate_population(population)
-
-    end_time = time.perf_counter_ns()
-
-    print("Best score:", population[0].score)
-
-    print("Execution time:", (end_time - start_time) / 1000000, "ms")
-    print("Time per generation:", (end_time - start_time) /
-          1000000 / NUM_GENERATIONS, "ms")
