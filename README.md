@@ -1,4 +1,6 @@
-*Yes I am aware this "documentation" is sub-par, it is a work-in-progress*
+# Aknowledgements
+[@keegancsmith](https://github.com/keegancsmith)
+[@mvniekerk](https://github.com/mvniekerk)
 
 # Genetic Algorithm Performance Benchmark
 
@@ -43,10 +45,11 @@ For each language, it is intended to complete a first implementation without any
 ## Basic Level of Completion
 - Golang (Type 1)
 - Python (Type 1)
-## In Progess
 - Rust (Type 1)
+## In Progess
 ## Planned
 - Kotlin
+- Clojure
 
 # Visualization
 What is the point of creating an AI if you cant create a cool GIF for twitter? Currently I am looking at the following ways of animating the learning process:
