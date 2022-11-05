@@ -14,3 +14,9 @@ __pycache__/
 ## Rust
 *.lock
 rust/target/
+
+## Kotlin
+kotlin/.idea/
+kotlin/out/
+*.iml
+*.jar

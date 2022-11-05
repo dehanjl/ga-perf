@@ -74,4 +74,5 @@ In order to compare the different implementations, it is intended to measure all
 # Results from using [Hyperfine](https://github.com/sharkdp/hyperfine)
 - Rust: 1x
 - Golang: 2.67x
+- Kotlin (JVM): 13.71x
 - Python: 49.71x
