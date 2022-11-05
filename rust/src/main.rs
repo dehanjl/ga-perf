@@ -10,16 +10,14 @@ const NUM_GENERATIONS: i32 = 50;
 const NUM_SURVIVORS: i32 = 100;
 
 type Point = (f64, f64);
-type World = Vec<Point>;
 type Agent = Vec<i32>;
-type Population = Vec<Agent>;
 
 fn main() {
     // set up world
-    let world: World = (0..NUM_POINTS).map(|_| new_point()).collect();
+    let world: Vec<Point> = (0..NUM_POINTS).map(|_| new_point()).collect();
 
     // set up the initial population
-    let mut population: Population = (0..MAX_POPULATION).map(|_| new_random_agent()).collect();
+    let mut population: Vec<Agent> = (0..MAX_POPULATION).map(|_| new_random_agent()).collect();
 
     for _ in 0..NUM_GENERATIONS {
         eval_and_sort(&mut population, &world);
