@@ -1,6 +1,7 @@
 ## GoLang
 # Binaries for programs and plugins
 *.exe
+golang/out/
 
 ## Python
 # Byte-compiled / optimized / DLL files

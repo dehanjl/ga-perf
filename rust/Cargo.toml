@@ -10,4 +10,4 @@ rand = "0.8.5"
 noisy_float = "0.2.0"
 
 [profile.release]
-debug = true
+debug = false
