@@ -11,7 +11,7 @@ NUM_GENERATIONS = 50
 NUM_SURVIVORS = 100
 
 
-def evaluate_population(pop: List['Agent']):
+def evaluate_population(pop: List["Agent"]):
     for agent in pop:
         agent.evaluate(points)
 
@@ -20,8 +20,7 @@ def evaluate_population(pop: List['Agent']):
     return pop
 
 
-if __name__ == '__main__':
-
+if __name__ == "__main__":
     # define the points
     points = [random_point(MAX_SIZE) for _ in range(NUM_POINTS)]
 
@@ -36,8 +35,7 @@ if __name__ == '__main__':
         survivors = population[:NUM_SURVIVORS]
 
         # make the next generation
-        population = [Agent(NUM_POINTS, survivors)
-                      for _ in range(MAX_POPULATION)]
+        population = [Agent(NUM_POINTS, survivors) for _ in range(MAX_POPULATION)]
 
     # evalutate the final population
     population = evaluate_population(population)

@@ -1,4 +1,4 @@
-use noisy_float::prelude::r64;
+use ordered_float::OrderedFloat;
 use rand::{seq::SliceRandom, Rng};
 
 // tuneable parameters
@@ -73,5 +73,5 @@ fn eval(agent: &[i32], world: &[Point]) -> f64 {
 }
 
 fn eval_and_sort(pop: &mut [Agent], world: &[Point]) {
-    pop.sort_by_cached_key(|a| r64(eval(a, world)));
+    pop.sort_by_cached_key(|a| OrderedFloat(eval(a, world)));
 }

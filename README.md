@@ -1,6 +1,6 @@
-# Genetic Algorithm Performance Benchmark
+# Genetic Algorithm Performance Micro-Benchmark
 
-The idea is to implement various versions of a [Genetic Algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) intended to solve the [Travelling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem). The goal is to implement the same algorithm in various langauages. in order to compare their performance. Furthermore this serves as an excuse to try multiple languages and learn how to use them as efficiently as possible.
+The idea is to implement various versions of a [Genetic Algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) intended to solve the [Travelling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem). The goal is to implement the same algorithm in various languages. in order to compare their performance. Furthermore this serves as an excuse to try multiple languages and learn how to use them as efficiently as possible.
 
 ## The World
 The world consists of some number of fixed points, and an agent must find the shortest path for visiting all points in this world.
@@ -28,10 +28,15 @@ For each language, it is intended to complete a first implementation without any
 - Golang
 - Python
 - Rust
-### In Progess
 - Kotlin
+#### A note on alternative runtimes.
+> I have also tried to run the current implementation using the Kotlin Native and Pypy runtimes. The results were not as good as the JVM and CPython runtimes. Kotlin Native is not actually supposed to be faster than the JVM. Pypy is probably slower because this is a micro-benchmark. Scaling this implemtation up would probably make Pypy faster than CPython.
 ### Planned
+- Zig
 - Clojure
+- Bend
+- Mojo
+
 
 ## Visualization
 What is the point of creating an AI if you cant create a cool GIF for twitter? Currently I am looking at the following ways of animating the learning process:
@@ -57,14 +62,18 @@ In order to compare the different implementations, it is intended to measure all
 - Rust: 1x
 - Golang: 2.67x
 - Kotlin (JVM): 13.71x
-- Python: 49.71x
+- Pure Python: 49.71x
 
-## Build Instructions
-### Kotlin
-Run from the `ga-perf\kotlin\src\main\kotlin\` directory
+## How to run
+1. First run the compilation script using
+```bash
+./compile.sh
 ```
-kotlinc Main.kt Agent.kt -include-runtime -d .\..\..\..\out\ga-perf.jar
+2. Run the benchmarking script using
+```bash
+./benchmark.sh
 ```
+
 
 
 # Aknowledgements
